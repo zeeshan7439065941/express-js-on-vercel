@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+#loginBox{
+    width:320px;
+    background:#1c1c1c;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(255,255,255,.1);
+}
+h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:20px;
+}
+label{
+    color:#fff;
+    display:block;
+    margin-bottom:5px;
+}
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+    background:#333;
+    color:#fff;
+    outline:none;
+}
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#0d6efd;
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+}
+button:hover{
+    background:#0b5ed7;
+}
+#iframePage{
+    display:none;
+    width:100%;
+    height:100vh;
+}
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loginBox">
+    <h2>Login</h2>
+
+    <label>Username :</label>
+    <input type="text" id="username">
+
+    <label>Password :</label>
+    <input type="password" id="password">
+
+    <button onclick="login()">Login</button>
+</div>
+
+<div id="iframePage">
+    <iframe src="https://tv4wab.wapka.site/?app=zee5&id=Zoom"
+            allowfullscreen></iframe>
+</div>
+
+<script>
+function login(){
+    var user=document.getElementById("username").value;
+    var pass=document.getElementById("password").value;
+
+    if(user==="1111" && pass==="2222"){
+        document.getElementById("loginBox").style.display="none";
+        document.getElementById("iframePage").style.display="block";
+    }else{
+        alert("Invalid Username or Password");
+    }
+}
+</script>
+
+</body>
+</html>
